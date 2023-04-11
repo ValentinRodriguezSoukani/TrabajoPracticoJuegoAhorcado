@@ -6,7 +6,7 @@ crearTabla(palabaraAdivinar);
 
     const letra = document.querySelector('input');
     letra.oninput = function(){
-        if(Letras(letras.value)){
+        if(Letras(letra.value)){
             Tabla(letra.value);
             Coincidencias(letra.value);
         }
@@ -21,7 +21,7 @@ function ingresaPalabra(){
 
         //verifica que la palabra no contenga numeros, espacios o sea mas de una palabra
         if(!/^[A-Za-z]+$/.test(palabra)){
-            alert("Esto no puede ser ingresado ya que:\n - Contiene numeros \ - Es mas de una palabra \n - Contiene un espaciado");
+            alert("Esto no puede ser ingresado ya que:\n - Contiene numeros \n - Es mas de una palabra \n - Contiene un espaciado");
         }
     }
     
@@ -33,9 +33,9 @@ function ingresaPalabra(){
 
     //se devuelve el arreglo de caracteres
     return arregloPalabra;
-}
+};
 
-function crearTabla(){
+function crearTabla(arregloPalabra){
     let tablero = document.getElementById("tabla");
     document.getElementById("tabla").classList.add("tabla");
     let tablahtml = "<table><tr>";
@@ -46,7 +46,7 @@ function crearTabla(){
     console.log(arregloCoincidencias);
 
     for(let i = 0; i < arregloCoincidencias.length; i++){
-        tablahtml += "<td>" + arregloCoincidencias[i] + "<td>";
+        tablahtml += "<td>" + arregloCoincidencias[i] + "</td>";
     }
 
     tablahtml += "</tr></table>";
@@ -94,11 +94,11 @@ function Coincidencias(letra){
         if(arregloCoincidencias.indexOf("?") == -1){
             document.getElementById("resultado").innerHTML = '<p>¡Genial no moriste!</p>';
             document.getElementById("resultado").classList.add("clase1");
-            letra.disable = true;
+            letra.disabled = true;
         }
     }else{
-        intentos --;
-        document.getElementById("estado").innerHTML = `No hubo coinciencias :(`;
+        intentos--;
+        document.getElementById("estado").innerHTML = `No hubo coinciencias`;
         document.getElementById("estado").classList.add("clase1");
         document.getElementById("intentos").innerHTML = '<p>Intentos Restantes</p>'+intentos;
         document.getElementById("intentos").classList.add("clase1");
@@ -106,7 +106,7 @@ function Coincidencias(letra){
         if(intentos == 0){
             document.getElementById("resultado").innerHTML = '<p>¡Que lastima te moriste!</p>';
             document.getElementById("resultado").classList.add("clase1");
-            letra.disable = true;
+            letra.disabled = true;
         }
     }
 
@@ -114,28 +114,28 @@ function Coincidencias(letra){
 
     switch(intentos){
         case 0:
-            imagen.src = "";
-        break;
+            imagen.src = "6intento.png";
+            break;
 
         case 1:
-            imagen.src = "";
-        break;
+            imagen.src = "5intento.png";
+            break;
 
         case 2:
-            imagen.src = "";
-        break;
+            imagen.src = "4intento.png";
+            break;
 
         case 3:
-            imagen.src = "";
-        break;
+            imagen.src = "3intento.png";
+            break;
 
         case 4:
-            imagen.src = "";
-        break;
+            imagen.src = "2intento.png";
+            break;
 
         case 5:
-            imagen.src = "";
-        break;
+            imagen.src = "1intento.png";
+            break;
     }
 }
 
@@ -143,9 +143,9 @@ function Tabla(letra){
     let tablero = document.getElementById("tabla");
     let tablahtml = "<table><tr>";
 
-    for(let i = 0; i < arregloCoincidencias.length; i++){
-        if(palabaraAdivinar[i] == letra){
-            arregloCoincidencias[i] = letra;
+    for(let i = 0; i < palabaraAdivinar.length; i++){
+        if(palabaraAdivinar[i]==letra){
+            arregloCoincidencias[i]=letra;
         }
     }
 

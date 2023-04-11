@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 
-.h1{
+.tiulos{
     text-align: center;
     font-size: 40px;
-    color: crimson;
+    color: crimson; 
     font-family: 'Verdana';
 
 }
@@ -20,6 +20,7 @@
 }
 
 .input{
+    text-align: center;
     display: block;
     margin: auto;
     background: darkgray;
@@ -52,4 +53,16 @@
     text-align: center;
     color: crimson;
     font-family: 'Verdana';
+}
+.fondo{
+    background-image:linear-gradient(to bottom, black, rgb(218, 56, 89));
+}
+
+.imagen{
+    display: block;
+    margin: auto;
+    border: 2px solid black;
+}
+.ingreso{
+    
 }

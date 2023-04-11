@@ -7,11 +7,11 @@
         <title>Juego Ahorcado</title>
         <link rel="stylesheet" href="estilos.css">
     </head>
-    <body class = "color">
+    <body>
 
-        <div>
+        <div class = "fondo">
             <div>
-                <h1 class="h1">
+                <h1 class="tiulos">
                     Juego del Ahorcado
                 </h1>
                 <p class="Subtitulos">
@@ -21,7 +21,7 @@
                 <p class="Subtitulos">
                     Ingrese una letra:
                 </p>
-                <div>
+                <div class="casilla">
                     <input class="input" type="text" name="nombre" maxlength="1">
                 </div>
                 <div id="estado"></div>
@@ -29,7 +29,7 @@
                 <p id="resultado"></p>
             </div>
             <div>
-                <img id="imagen" width="250" src="0intentos.png">
+                <img class="imagen" id="imagen" width="250" src="inicial.png">
             </div>
         </div>
         <button class="boton" onclick="recargarPagina()"> Intentar de nuevo</button>

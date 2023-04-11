@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.h1{
+    text-align: center;
+    font-size: 40px;
+    color: crimson;
+    font-family: 'Verdana';
+
+}
+
+.Subtitulos{
+    text-align: center;
+    font-size: 20px;
+    color: crimson;
+    font-family: 'Verdana';
+}
+
+.input{
+    display: block;
+    margin: auto;
+    background: darkgray;
+    color: crimson;
+}
+
+.boton{
+    width: 100%;
+    background: white;
+    border: none;
+    padding: 10px;
+    color: crimson;
+    margin: 20px 0;
+    font-size: 15px;
+}
+
+.tabla{
+    width: 250px;
+    background: darkgray;
+    padding: 30px;
+    margin: auto;
+    margin-top: 15px;
+    margin-block: 15px;
+    border-radius: 5px;
+    font-family: 'Verdana';
+    color: crimson;
+}
+
+.clase1{
+    text-align: center;
+    color: crimson;
+    font-family: 'Verdana';
+}

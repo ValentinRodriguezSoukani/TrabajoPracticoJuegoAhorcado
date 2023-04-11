@@ -35,6 +35,7 @@ function ingresaPalabra(){
     return arregloPalabra;
 };
 
+//
 function crearTabla(arregloPalabra){
     let tablero = document.getElementById("tabla");
     document.getElementById("tabla").classList.add("tabla");
@@ -79,7 +80,8 @@ function Coincidencias(letra){
 
     let tablero = "";
     let aciertos = 0;
-
+    
+    //compara la letra que ingreso que las del arreglo
     palabaraAdivinar.forEach(caracter =>{
         if(caracter == letra){
             console.log(caracter);
@@ -90,19 +92,21 @@ function Coincidencias(letra){
     if(aciertos > 0){
         document.getElementById("estado").innerHTML = `Encontramos ${aciertos} coincidencias`;
         document.getElementById("estado").classList.add("clase1");
-
+    
+        //es un if que determina que si se completo la palabra gano
         if(arregloCoincidencias.indexOf("?") == -1){
             document.getElementById("resultado").innerHTML = '<p>¡Genial no moriste!</p>';
             document.getElementById("resultado").classList.add("clase1");
             letra.disabled = true;
         }
-    }else{
+    }else{//sino hubo coincidecias resta un intento y te mustra cuantos quedan
         intentos--;
         document.getElementById("estado").innerHTML = `No hubo coinciencias`;
         document.getElementById("estado").classList.add("clase1");
         document.getElementById("intentos").innerHTML = '<p>Intentos Restantes</p>'+intentos;
         document.getElementById("intentos").classList.add("clase1");
 
+        //si los intentos llegaron a cero se perdio y sale el cartel de moriste
         if(intentos == 0){
             document.getElementById("resultado").innerHTML = '<p>¡Que lastima te moriste!</p>';
             document.getElementById("resultado").classList.add("clase1");
@@ -112,6 +116,7 @@ function Coincidencias(letra){
 
     let imagen = document.getElementById("imagen");
 
+    //van cambiando las imagenes dependiedno de los intentos que tenga
     switch(intentos){
         case 0:
             imagen.src = "6intento.png";
@@ -139,6 +144,7 @@ function Coincidencias(letra){
     }
 }
 
+//crea la tabla donde se van a poner los signos ?
 function Tabla(letra){
     let tablero = document.getElementById("tabla");
     let tablahtml = "<table><tr>";
@@ -157,6 +163,7 @@ function Tabla(letra){
     tablero.innerHTML = tablahtml;
 }
 
+//recarga la pagina
 function recargarPagina(){
     location.reload();
 }

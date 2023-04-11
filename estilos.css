@@ -1,5 +1,5 @@
 *{
-    margin: 0;
+    margin: auto;
     padding: 0;
     box-sizing: border-box;
 }
@@ -9,7 +9,6 @@
     font-size: 40px;
     color: crimson; 
     font-family: 'Verdana';
-
 }
 
 .Subtitulos{
@@ -17,6 +16,7 @@
     font-size: 20px;
     color: crimson;
     font-family: 'Verdana';
+    margin-bottom: 10px;
 }
 
 .input{
@@ -25,21 +25,24 @@
     margin: auto;
     background: darkgray;
     color: crimson;
+    margin-bottom: 10px;
 }
 
 .boton{
-    width: 100%;
-    background: white;
-    border: none;
+    width: 50%;
+    background: crimson;
+    border: 2px solid black;
     padding: 10px;
-    color: crimson;
-    margin: 20px 0;
+    color: black;
+    margin-left: 25%;
+    margin-right: 25%;
     font-size: 15px;
 }
 
 .tabla{
+    text-align: center;
     width: 250px;
-    background: darkgray;
+    background: gray;
     padding: 30px;
     margin: auto;
     margin-top: 15px;
@@ -53,7 +56,9 @@
     text-align: center;
     color: crimson;
     font-family: 'Verdana';
+    margin-bottom: 10px;
 }
+
 .fondo{
     background-image:linear-gradient(to bottom, black, rgb(218, 56, 89));
 }
@@ -62,7 +67,5 @@
     display: block;
     margin: auto;
     border: 2px solid black;
-}
-.ingreso{
-    
+    margin-bottom: 10px;
 }
